@@ -13,7 +13,7 @@ frontend/build/
 # =========================
 # Environment variables
 # =========================
-.env
+backend/.env
 
 # =========================
 # Database files
