@@ -35,8 +35,8 @@ exports.register = async (req, res) => {
 exports.login=async(req,res)=>{
     try{
         const {email,password}=req.body;
-        const db = await initDB;
-        const user=await db.get(`SELECT * FROM user WHERE email=?`,[email]);
+        const db = await initDB();
+        const user=await db.get(`SELECT * FROM users WHERE email=?`,[email]);
         if(!user){
             return res.status(401).json({message:'Invalid Credientials'});
         }
